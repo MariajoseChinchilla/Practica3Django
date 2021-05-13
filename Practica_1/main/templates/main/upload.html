@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h2>Subir archivos</h2>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="document">
+    <button type="submit">Subir archivo</button>
+</form>
+  <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off"><a  href = '{% url "files list" nombre %}'>Archivos cargados</a></button></h6>
+{% endblock %}

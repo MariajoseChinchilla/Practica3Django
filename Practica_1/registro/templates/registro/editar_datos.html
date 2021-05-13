@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+<html>
+<head>
+    Actualizar datos
+</head>
+<body>
+    {% block content %}
+    {% load crispy_forms_tags %}
+<form method='POST' enctype="multipart/form-data">
+    {%csrf_token%}
+    {{u_form|crispy}}
+    {{p_form|crispy}}
+    <button type='submit'>Update</button>
+</form>
+    {% endblock %}
+</body>
+</html>
